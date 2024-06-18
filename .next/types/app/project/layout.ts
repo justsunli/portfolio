@@ -1,8 +1,8 @@
 // File: /Users/justsunli/Downloads/justsunli.github.io/app/project/layout.tsx
-import * as entry from '../../../../app/project/layout.js'
+import * as entry from '../../../../app/projects/layout.jsx'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../app/project/layout.js')
+type TEntry = typeof import('../../../../app/projects/layout.jsx')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{

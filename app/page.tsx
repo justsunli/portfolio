@@ -82,11 +82,16 @@ export default function Home() {
         </div>
       </div>
       <div className="basis-1/3">
-        <Card>
+ 
           <Image
-          src="https://cdn-icons-png.flaticon.com/512/5556/5556499.png"
+          isBlurred
+          // height={150}
+          style={{ maxHeight: '500px' }}
+          // src="https://cdn-icons-png.flaticon.com/512/5556/5556499.png"
+          src="/pfp.jpg"
+          alt="Sunny Li"
           />
-        </Card>
+    
       </div>
 
 

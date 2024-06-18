@@ -26,8 +26,8 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Project",
-      href: "/project",
+      label: "Projects",
+      href: "/projects",
     },
     {
       label: "Outdoor",
@@ -49,8 +49,8 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Project",
-      href: "/project",
+      label: "Projects",
+      href: "/projects",
     },
     {
       label: "Outdoor",
