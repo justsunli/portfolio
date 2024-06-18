@@ -16,16 +16,25 @@ import {useEffect } from 'react';
 export default function Home() {
 
   useEffect(() => {
-    const e1 = annotate(document.querySelector('#developer'), { type: 'highlight', color:'#FFD100' });
-    const e2 = annotate(document.querySelector('#ucla'), { type: 'underline', color:'#2774AE' });
-    const e3 = annotate(document.querySelector('#full-stack'), { type: 'box', color:'#a40efb' });
-    const e4 = annotate(document.querySelector('#helpful'), { type: 'highlight', color:'#ef8d74' });
-    const e5 = annotate(document.querySelector('#geology'), { type: 'underline', color:'#31e292' });
-    const e6 = annotate(document.querySelector('#hireMe'), { type: 'circle', color:'#ae2727' });
+    const element1 = document.querySelector('#developer') as HTMLElement;;
+    const element2 = document.querySelector('#ucla') as HTMLElement;;
+    const element3 = document.querySelector('#full-stack') as HTMLElement;;
+    const element4 = document.querySelector('#helpful') as HTMLElement;;
+    const element5 = document.querySelector('#geology') as HTMLElement;;
+    const element6 = document.querySelector('#hireMe') as HTMLElement;;
 
-    const ag = annotationGroup([e1, e2, e3, e4, e5, e6]);
-    ag.show();
-  }, []);
+    if (element1 && element2 && element3 && element4 && element5 && element6) {
+      const e1 = annotate(element1, { type: 'highlight', color:'#FFD100' });
+      const e2 = annotate(element2, { type: 'underline', color:'#2774AE' });
+      const e3 = annotate(element3, { type: 'box', color:'#a40efb' });
+      const e4 = annotate(element4, { type: 'highlight', color:'#ef8d74' });
+      const e5 = annotate(element5, { type: 'underline', color:'#31e292' });
+      const e6 = annotate(element6, { type: 'circle', color:'#ae2727' });
+
+      const ag = annotationGroup([e1, e2, e3, e4, e5, e6]);
+      ag.show();
+  }
+}, []);
 
   return (
     <div>
