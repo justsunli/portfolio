@@ -3,38 +3,56 @@ import { title } from "@/components/primitives";
 import React from "react";
 import {Tabs, Tab, Card, CardBody, CardHeader, Image} from "@nextui-org/react";
 import ProjectCard from "./ProjectCard";
+import csdata from "../../assets/csprojects.json";
 
-export default function AboutPage() {
+
+export default function projects() {
   // const [isVertical, setIsVertical] = React.useState(true);
+  // type Project = {
+  //   projectName: string;
+  //   linkType: 'github' | 'web';
+  //   link: string;
+  //   lang: string[];
+  //   description: string;
+  //   year: string;
+  //   imageURL: string;
+  // };
+
+  const cs_projects = csdata;
   return (
-    <div className="flex flex-col px-4">
+    <div className="flex flex-col items-center px-4">
       {/* <Switch className="mb-4" isSelected={isVertical} onValueChange={setIsVertical}>
         Vertical
       </Switch> */}
-      <div className="flex w-full flex-col">
-        <Tabs aria-label="Options">
+      {/* <div className="flex w-full flex-col"> */}
+        <Tabs aria-label="Options" >
           <Tab key="comsci" title="Com Sci">
-            {/* <Card>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>   */}
-            <div className="flex flex-col gap-5 sm:flex-row">
-              <ProjectCard/>
-              <ProjectCard/>
-              <ProjectCard/>
+            <div className="flex flex-wrap justify-center flex-col gap-5 sm:flex-row">
+              {cs_projects.map((project, index) => (
+                <ProjectCard 
+                  key={index}
+                  projectName={project.projectName}
+                  linkType={project.linkType}
+                  link={project.link}
+                  language={project.lang}
+                  description={project.description}
+                  year={project.year}
+                  imageURL={project.imageURL}
+                  />
+                ))}
             </div>
-            <div className="flex flex-col gap-5 mt-5 sm:flex-row">
+            {/* <div className="flex flex-col gap-5 mt-5 sm:flex-row">
               <ProjectCard/>
               <ProjectCard/>
               <ProjectCard/>
+              </div> */}
               {/* <Card>
                 <CardBody>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </CardBody>
 
               </Card> */}
-            </div>
+         
           </Tab>
           <Tab key="geo" title="Geology">
             <div className="flex flex-col gap-5 sm:flex-row">
@@ -44,7 +62,7 @@ export default function AboutPage() {
             </div>
           </Tab>
         </Tabs>
-      </div>
+      {/* </div> */}
     </div>
   );
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "projectName": "FPGA Stopwatch",
+    "linkType": "github",
+    "link": "https://github.com/justsunli/fpga-stopwatch",
+    "lang": ["Verilog"],
+    "description": "a digital stopwatch implemented on the Basys 3 FPGA board",
+    "year": "2024",
+    "imageURL": "https://e17j6shnrdaqf5zd.public.blob.vercel-storage.com/stopwatch-ojSLZPiT38YTaTYGhw500jGl8RNb2A.jpg"
+  },
+  {
+    "projectName": "Game Glance",
+    "linkType": "github",
+    "link": "https://github.com/justsunli/interpreter-v4",
+    "lang": ["TypeScript","React","MySQL","Go"],
+    "description": "a web app that provides aggregated summary for game reviews using LLM model",
+    "year": "2024",
+    "imageURL": "https://e17j6shnrdaqf5zd.public.blob.vercel-storage.com/landing-page-1dlvEbqBQtDWqsIlR7IcBpDRhGdyYQ.jpg"
+  },
+  {
+    "projectName": "Brewin#",
+    "linkType": "github",
+    "link": "https://github.com/justsunli/interpreter-v4",
+    "lang": ["Python"],
+    "description": "an OOP programming language built for COM SCI 131",
+    "year": "2023",
+    "imageURL": "https://e17j6shnrdaqf5zd.public.blob.vercel-storage.com/brewin-di4sqJyBqISjNUdTgrKYCmraROW18k.jpg"
+  },
+  {
+    "projectName": "On Track",
+    "linkType": "github",
+    "link": "https://github.com/AryamanLadha/onTrack-Backend",
+    "lang": ["JavaScript", "MongoDB"],
+    "description": "a smart course planner built by UCLA students and for UCLA students",
+    "year": "2022",
+    "imageURL": "https://e17j6shnrdaqf5zd.public.blob.vercel-storage.com/onTrack-xAPRetFy0kuIzCxmDuR6fCrILnWwjF.png"
+  },
+  {
+    "projectName": "Rivary Issue 2021",
+    "linkType": "web",
+    "link": "https://web.archive.org/web/20211209063816/https://dailytrojan.dailybruin.com/2021/",
+    "lang": ["JavaScript", "React"],
+    "description": "Daily Bruin x Daily Trojan collaborated page for the annual football rivalry game",
+    "year": "2021",
+    "imageURL": "https://e17j6shnrdaqf5zd.public.blob.vercel-storage.com/crosstownclash21-6HqjE5gzE57nJHstfnWTMB4F6dfGhZ.png"
+  },
+  {
+    "projectName": "Graduation Issue 2021",
+    "linkType": "web",
+    "link": "https://special-features.dailybruin.com/2021/graduation-issue/",
+    "lang": ["JavaScript","React"],
+    "description": "Daily Bruin’s 2021 Graduation Issue: 'Sunrise.'",
+    "year": "2021",
+    "imageURL": "https://e17j6shnrdaqf5zd.public.blob.vercel-storage.com/graduationissue21-u16lH9aH2Rpt8SO482N6L7CfHmOLRF.png"
+  }
+]
