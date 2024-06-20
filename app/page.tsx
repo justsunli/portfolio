@@ -26,10 +26,10 @@ export default function Home() {
     if (element1 && element2 && element3 && element4 && element5 && element6) {
       const e1 = annotate(element1, { type: 'highlight', color:'#FFD100' });
       const e2 = annotate(element2, { type: 'underline', color:'#2774AE' });
-      const e3 = annotate(element3, { type: 'box', color:'#a40efb' });
-      const e4 = annotate(element4, { type: 'highlight', color:'#ef8d74' });
-      const e5 = annotate(element5, { type: 'underline', color:'#31e292' });
-      const e6 = annotate(element6, { type: 'circle', color:'#ae2727' });
+      const e3 = annotate(element3, { type: 'box', color:'#c8b6ff' });
+      const e4 = annotate(element4, { type: 'highlight', color:'#ffb5a7' });
+      const e5 = annotate(element5, { type: 'underline', color:'#99d98c' });
+      const e6 = annotate(element6, { type: 'circle', color:'#e5989b' });
 
       const ag = annotationGroup([e1, e2, e3, e4, e5, e6]);
       ag.show();
@@ -39,8 +39,12 @@ export default function Home() {
   return (
     <div>
 
-    <section className="flex flex-row items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-lg text-left justify-center basis-2/3 ">
+    {/* <section className="flex flex-row items-center justify-center gap-4 py-8 md:py-10">
+     */}
+    <section className="flex flex-col sm:flex-row items-center justify-center gap-4 py-8 md:py-10">
+      {/* <div className="inline-block max-w-lg text-left justify-center basis-2/3 sm:px-1">
+       */}
+       <div className="inline-block max-w-lg text-center sm:text-left justify-center basis-2/3 px-4 sm:px-0">
         <h1 className={title({class:"text-lg"})}>
           Hello! I'm Sunny, a&nbsp;<span id="developer">developer</span>&nbsp;based in Los Angeles, CA.
         </h1>
@@ -49,7 +53,7 @@ export default function Home() {
           I graduated from&nbsp;<span id="ucla">UCLA</span>&nbsp;this June and am passionate about building tools that are practical and useful in real life.
         </h2>
         <h2 className={subtitle()}>
-          I'm interested in &nbsp;<span id="full-stack">full-stack</span>&nbsp; web development and love creating solutions that people find &nbsp;<span id="helpful">helpful</span>&nbsp;. I’m also an outdoor enthusiast and into &nbsp;<span id="geology">geology</span>&nbsp;. I am exploring paths where geology and computer science intersect.
+          I'm interested in&nbsp;<span id="full-stack">full-stack</span>&nbsp;web development and love creating solutions that people find&nbsp;<span id="helpful">helpful</span>&nbsp;. I’m also an outdoor enthusiast and into&nbsp;<span id="geology">geology</span>&nbsp;. I am exploring paths where geology and computer science intersect.
         </h2>
         <h2 className={subtitle()}>
           I'm currently looking for an entry level software engineer role. &nbsp;<span id="hireMe">Hire me?</span>&nbsp;
@@ -81,13 +85,13 @@ export default function Home() {
             <GithubIcon size={20} />
             GitHub
           </Link>
-          <Link
+          {/* <Link
             isExternal
             className={buttonStyles({ variant: "bordered", radius: "full" })}
             href={siteConfig.links.contact}
           >
             Contact Me
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="basis-1/3">
@@ -97,23 +101,11 @@ export default function Home() {
           // height={150}
           style={{ maxHeight: '500px' }}
           // src="https://cdn-icons-png.flaticon.com/512/5556/5556499.png"
-          src="/pfp.jpg"
+          src="/animatedpfp.png"
           alt="Sunny Li"
           />
     
       </div>
-
-
-     
-
-      {/* <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="flat">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
-      </div> */}
-    
 
       </section>
     </div>

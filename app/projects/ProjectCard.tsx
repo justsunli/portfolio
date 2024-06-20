@@ -24,7 +24,7 @@ export default function ProjectCard({ projectName, linkType, link, language, des
     >
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <div className="flex flex-row gap-2">
-          <h4 className="font-bold text-large pb-1">{projectName}</h4>
+          <h4 className="font-bold text-large pb-1 text-left leading-tight">{projectName}</h4>
           <Link isExternal aria-label="Github" href={link}>
             {linkType === 'github' ? <GithubIcon className="text-default-500" /> : <LinkIcon className="text-default-500" />}
           </Link>
@@ -44,13 +44,15 @@ export default function ProjectCard({ projectName, linkType, link, language, des
         </p>
       </CardHeader>
       <CardBody className="overflow-visible py-2">
-        <Image
+        {/* <Image
           alt={projectName}
           className="object-cover rounded-xl"
           src={imageURL}
           width={270}
           height={220}
-        />
+          layout="fill"
+        /> */}
+        <img className="object-cover rounded-xl" src={imageURL} alt={projectName} style={{ height: '202px' }} />
       </CardBody>
     </Card>
   );

@@ -37,10 +37,10 @@ export const siteConfig = {
     //   label: "Blog",
     //   href: "/blog",
     // },
-    {
-      label: "Contact",
-      href: "/contact",
-    },
+    // {
+    //   label: "Contact",
+    //   href: "/contact",
+    // },
     
   ],
   navMenuItems: [
@@ -60,10 +60,10 @@ export const siteConfig = {
     //   label: "Blog",
     //   href: "/blog",
     // },
-    {
-      label: "Contact",
-      href: "/contact",
-    },
+    // {
+    //   label: "Contact",
+    //   href: "/contact",
+    // },
     // {
     //   label: "Profile",
     //   href: "/profile",

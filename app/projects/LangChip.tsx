@@ -7,6 +7,7 @@ interface LangChipProps {
 export default function LangChip({lang}: LangChipProps){
   let color: "success" | "warning" | "primary" | "secondary" | "default" | "danger"| undefined;
   switch (lang){
+    case "Presentation":
     case "Python":
       color = "primary";
       break;
@@ -17,6 +18,7 @@ export default function LangChip({lang}: LangChipProps){
     case "C++":
       color = "danger";
       break;
+    case "Review Paper":
     case "MongoDB":
     case "MySQL":
       color = "secondary";
