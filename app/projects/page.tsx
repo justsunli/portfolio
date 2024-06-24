@@ -2,7 +2,7 @@
 import { title } from "@/components/primitives";
 import React from "react";
 import {Tabs, Tab, Card, CardBody, CardHeader, Image} from "@nextui-org/react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "@/components/ProjectCard";
 import csdata from "../../assets/csprojects.json";
 import geodata from "../../assets/geoprojects.json";
 

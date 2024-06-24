@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -26,37 +28,57 @@ import {
   Logo,
 } from "@/components/icons";
 import favicon from "@/public/favicon2.png";
+import { useEffect, useReducer } from 'react';
 
 export const Navbar = () => {
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  );
+  const [isMenuOpen, setIsMenuOpen] = useReducer((current) => !current, false)
+  
+  // console.log(isMenuOpen);
+  // useEffect(() => {
+  //   console.log(isMenuOpen);
+  // },[isMenuOpen]);
+
+  // const handleMenuOpenChange = (isOpen: boolean) => {
+  //   console.log('Menu state changed:', isOpen);
+  //   setIsMenuOpen(isOpen);
+  // };
+
+  // const closeMenu = () => {
+  //   setIsMenuOpen(false);
+  // };
+
+  // const searchInput = (
+  //   <Input
+  //     aria-label="Search"
+  //     classNames={{
+  //       inputWrapper: "bg-default-100",
+  //       input: "text-sm",
+  //     }}
+  //     endContent={
+  //       <Kbd className="hidden lg:inline-block" keys={["command"]}>
+  //         K
+  //       </Kbd>
+  //     }
+  //     labelPlacement="outside"
+  //     placeholder="Search..."
+  //     startContent={
+  //       <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
+  //     }
+  //     type="search"
+  //   />
+  // );
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar maxWidth="xl" position="sticky" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
+          <div onClick={()=> console.log("sunny is pressed")}>
+            <Link className="flex justify-start items-center gap-1" href="/" >
+              <p className="font-bold text-inherit">Sunny Li</p>
+            </Link>
+
+          </div>
           
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <p className="font-bold text-inherit">Sunny Li</p>
-          </NextLink>
         </NavbarBrand>
         
       </NavbarContent>
@@ -76,6 +98,10 @@ export const Navbar = () => {
                 )}
                 color="foreground"
                 href={item.href}
+                onClick={()=> {
+                  console.log("next link pressed");
+                }}
+                
               >
                 {item.label}
               </NextLink>
@@ -113,31 +139,41 @@ export const Navbar = () => {
           <GithubIcon className="text-default-500" />
         </Link>
         <ThemeSwitch />
-        <NavbarMenuToggle />
+        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"}/>
       </NavbarContent>
 
-      <NavbarMenu>
-        {/* {searchInput} */}
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={"foreground"
-                  // index === 2
-                  //   ? "primary"
-                  //   : index === siteConfig.navMenuItems.length - 1
-                  //     ? "danger"
-                  //     : "foreground"
-                }
-                href={`${item.href}`}
-                size="lg"
+      {/* { isMenuOpen && ( */}
+        <NavbarMenu>
+          {/* {searchInput} */}
+          <div className="mx-4 mt-2 flex flex-col gap-2">
+            {siteConfig.navMenuItems.map((item, index) => (
+              <NavbarMenuItem key={`${item}-${index}`}
+                
               >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
-      </NavbarMenu>
+                <Link
+                  color={"foreground"
+                    // index === 2
+                    //   ? "primary"
+                    //   : index === siteConfig.navMenuItems.length - 1
+                    //     ? "danger"
+                    //     : "foreground"
+                  }
+                  href={item.href}
+                  size="lg"
+                  onPress={()=> {
+                    console.log("pressed");
+                    setIsMenuOpen();
+                  }}
+                  
+                >
+                  {item.label}
+                </Link>
+              </NavbarMenuItem>
+            ))}
+          </div>
+        </NavbarMenu>
+      {/* )} */}
+     
     </NextUINavbar>
   );
 };
