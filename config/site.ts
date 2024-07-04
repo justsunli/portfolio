@@ -29,10 +29,10 @@ export const siteConfig = {
       label: "Projects",
       href: "/projects",
     },
-    {
-      label: "Outdoor",
-      href:"/outdoor",
-    },
+    // {
+    //   label: "Outdoor",
+    //   href:"/outdoor",
+    // },
     // {
     //   label: "Blog",
     //   href: "/blog",
@@ -52,10 +52,10 @@ export const siteConfig = {
       label: "Projects",
       href: "/projects",
     },
-    {
-      label: "Outdoor",
-      href:"/outdoor",
-    },
+    // {
+    //   label: "Outdoor",
+    //   href:"/outdoor",
+    // },
     // {
     //   label: "Blog",
     //   href: "/blog",
