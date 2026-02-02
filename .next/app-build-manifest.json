@@ -8,33 +8,13 @@
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/layout.css",
+      "static/css/css-src_app_globals_css-node_modules_pnpm_next_14_2_1_react-dom_18_3_1_react_18_3_1__react_18-754178.css",
       "static/chunks/app/layout.js"
     ],
-    "/error": [
+    "/loading": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/error.js"
-    ],
-    "/projects/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/projects/page.js"
-    ],
-    "/projects/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/projects/layout.js"
-    ],
-    "/outdoor/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/outdoor/page.js"
-    ],
-    "/outdoor/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/outdoor/layout.js"
+      "static/chunks/app/loading.js"
     ]
   }
 }
