@@ -95,7 +95,7 @@ export const RESUME_DATA: ResumeData = {
         "Implemented 64-bit bitmap column imprints, integrated predicate-aware pruning, and benchmarked up to 84% speedups on selective TPC-H/DS queries.",
       link: {
         label: "GitHub",
-        href: "https://github.com/justsunli/fall25-csci543-project2",
+        href: "https://github.com/justsunli/fall25-csci543-project2/tree/merged",
       },
     },
     {
@@ -113,7 +113,7 @@ export const RESUME_DATA: ResumeData = {
       description: "Web app that aggregates and summarizes game reviews with LLM support.",
       link: {
         label: "GitHub",
-        href: "https://github.com/justsunli/interpreter-v4",
+        href: "https://github.com/justsunli/gameglance_frontend",
       },
     },
     {
@@ -150,15 +150,6 @@ export const RESUME_DATA: ResumeData = {
       link: {
         label: "Feature",
         href: "https://special-features.dailybruin.com/2021/graduation-issue/",
-      },
-    },
-    {
-      title: "Origin of Plate Tectonics",
-      techStack: ["Presentation", "Geoscience"],
-      description: "Deck summarizing a review paper on drivers of plate tectonics and evidence for initiation ~3 Ga.",
-      link: {
-        label: "Slides",
-        href: "https://drive.google.com/file/d/1GiaLuFU0DQZMnCScdNOWN6mIlj4b1Zk-/view?usp=sharing",
       },
     },
     {
